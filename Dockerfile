@@ -36,4 +36,4 @@ WORKDIR /root
 COPY build.sbt Main.scala CommandlineArgument.scala /root/
 
 RUN export SBT_OPTS="-Xms4096M -Xmx8192M" && sbt compile
-CMD sbt "run /root/src_image /root/output"
+CMD sbt "run /root/src_image /root/output" > /root/output/yuruchara_labels_`date +%Y%m%d%H%M%S`.log
