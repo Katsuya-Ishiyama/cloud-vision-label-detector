@@ -1,0 +1,10 @@
+version: '2'
+
+services: 
+  app:
+    build: .
+    container_name: cloud-vision-label-detector
+    volumes: 
+      - ../decile_data/image/src:/root/src_image:ro
+      - ../:/root/output:rw
+
